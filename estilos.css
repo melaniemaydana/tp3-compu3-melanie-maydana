@@ -1,0 +1,230 @@
+/*CSS Documment*/
+@charset "UTF-8";
+
+/*Ajustes Generales*/
+
+@font-face {
+    font-family: "ClashDisplay-Extralight";
+    src: url(fonts/clash-display/clash-displat-extralight.ttf) format(truetype);
+    font-weight: 200;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ClashDisplay-Light";
+    src: url(fonts/clash-display/clash-display-light.ttf) format(truetype);
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ClashDisplay-Regular";
+    src: url(fonts/clash-display/clash-display-regular.ttf) format(truetype);
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ClashDisplay-Medium";
+    src: url(fonts/clash-display/clash-display-medium.ttf)format(truetype);
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ClashDisplay-Semibold";
+    src: url(fonts/clash-display/clash-display-semibold.ttf) format(truetype);
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ClashDisplay-Bold";
+    src: url(fonts/clash-display/clash-display-bold.ttf) format(truetype);
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ClashDisplay-Variable";
+    src: url(fonts/clash-display/clash-display-variable.ttf) format(truetype);
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Dx Lactos";
+    src: url(fonts/dxlactos-regular.otf) format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+p {
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Ajustes especificos*/
+
+body {
+    background-color: #eaeaea;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(0deg, #6E6EFF 20%, #262223 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 100px
+}
+
+/* NAVBAR */
+
+nav {
+    min-width: 500px;
+    max-width: 1446px;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO */
+.logo img {
+    width: 45px;
+}
+
+/* LINKS */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 70px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #EAEAEA;
+    font-size: 1rem;
+    font-family: 'ClashDisplay-Variable';
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+/* HOVER */
+nav a:hover {
+    color: #a7fc00;
+}
+
+/* HERO */
+
+.hero{
+    width: 100%;
+    padding: 90px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* CONTENIDO */
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+}
+
+/* LINEA */
+
+.mini-line{
+    width: 30px;
+    height: 4px;
+    background-color: #EAEAEA;
+    margin-bottom: 20px;
+}
+
+/* TEXTO */
+
+p{
+    color: #EAEAEA;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+h1{
+    color: #EAEAEA;
+    font-family: 'ClashDisplay-Variable';
+    font-size: 11.25rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+h1 span{
+    color: #a7fc00;
+    font-family: 'Dx Lactos';
+    font-size: 11.25rem;
+}
+
+h2{
+    color: #EAEAEA;
+    font-family: 'ClashDisplay-Variable';
+    font-weight: 400;
+    font-size: 5rem;
+    margin-bottom: 40px;
+}
+
+/* BOTON */
+
+.boton{
+    width: fit-content;
+    padding: 12px 24px;
+    border: 2px solid #EAEAEA;
+    border-radius: 999px;
+    text-decoration: none;
+    font-family: 'ClashDisplay-Variable';
+    font-size: 1.8rem;
+    font-weight: 400;
+    color:#EAEAEA;
+    transition: 0.3;
+}
+
+.boton:hover {
+    background-color: #EAEAEA;
+    color: #6E6EFF;
+}
+
+/* ESTRELLA */
+
+.estrella {
+    width: 240px;
+    height: 240 px;
+    animation: girar 8s linear infinite;
+}
+
+@keyframes girar{
+
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+
+}
