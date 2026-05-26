@@ -83,7 +83,7 @@ p {
 /* Ajustes especificos*/
 
 body {
-    background-color: #eaeaea;
+    background-color: #eaeaea; /* esto no está cambiando cosas */
 }
 
 /* HEADER */
@@ -91,14 +91,15 @@ header {
     background: linear-gradient(0deg, #6E6EFF 20%, #262223 100%);
     display: flex;
     flex-direction: column;
-    padding: 30px 100px
+    padding: 30px 100px;
+    /* en pantallas más grandes te van a quedar descentrados los elementos */
 }
 
 /* NAVBAR */
 
 nav {
     min-width: 500px;
-    max-width: 1446px;
+    max-width: 1446px; /* aunque establezcas min y max te hace falta especificar un width porque cuando justifiques a su padre al centro se va a achicar */
     padding: 20px 0px;
     display: flex;
     justify-content: space-between;
@@ -137,7 +138,7 @@ nav a:hover {
 
 .hero {
     width: 100%;
-    padding: 90px 0px;
+    padding: 90px 0px; /* en lugar de acomodar esta caja con paddings podés probar con heigth en vh así responde de forma distinta en otras pantallas pero se ve exactamente igual y no tenés paddings tan grandes que te compromentan en pantallas pequeñas*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -201,7 +202,7 @@ nav a:hover {
     font-size: 1.8rem;
     font-weight: 400;
     color: #EAEAEA;
-    transition: 0.3;
+    transition: 0.3; /*te falta una unidad de medida*/
 }
 
 .boton-primario:hover {
@@ -212,23 +213,23 @@ nav a:hover {
 /* ESTRELLA */
 
 .estrella {
-    width: 240px;
+    width: 240px; /* las medidas van dentro de la etiqueta img, y el alto está mal escrito */
     height: 240 px;
     animation: girar 8s linear infinite;
 }
 
 /* PRESENTACIÓN*/
 .presentacion {
-    min-height: 100vh;
+    min-height: 100vh; /* en pantallas más grandes el contenido se ve descentrado, te falta un justify */
     background: #6E6EFF;
     display: flex;
     padding: 98px 0px 25px 0px;
     flex-direction: column;
     align-items: center;
-    gap: 161px;
-    position: relative;
-    flex-shrink: 0;
-    align-self: stretch;
+    gap: 161px; /* el gap casi siempre tiene la misma característica de los paddings y margins: si es mayor a 80px significa que podés usar otras propiedades de flex para llegar al mismo resultado, fijate cómo te va con justify */
+    position: relative; /* esto por qué? */
+    flex-shrink: 0; /* esto por qué? */
+    align-self: stretch;/* esto por qué? */
 }
 
 /* CONTENIDO */
