@@ -83,7 +83,7 @@ p {
 /* Ajustes especificos*/
 
 body {
-    background-color: #eaeaea; /* esto no está cambiando cosas */
+    background-color: #eaeaea;
 }
 
 /* HEADER */
@@ -91,15 +91,15 @@ header {
     background: linear-gradient(0deg, #6E6EFF 20%, #262223 100%);
     display: flex;
     flex-direction: column;
+    width: 100%;
     padding: 30px 100px;
-    /* en pantallas más grandes te van a quedar descentrados los elementos */
 }
 
 /* NAVBAR */
 
 nav {
+    width: 100%;
     min-width: 500px;
-    max-width: 1446px; /* aunque establezcas min y max te hace falta especificar un width porque cuando justifiques a su padre al centro se va a achicar */
     padding: 20px 0px;
     display: flex;
     justify-content: space-between;
@@ -138,7 +138,7 @@ nav a:hover {
 
 .hero {
     width: 100%;
-    padding: 90px 0px; /* en lugar de acomodar esta caja con paddings podés probar con heigth en vh así responde de forma distinta en otras pantallas pero se ve exactamente igual y no tenés paddings tan grandes que te compromentan en pantallas pequeñas*/
+    height: 80vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -195,14 +195,15 @@ nav a:hover {
 .boton-primario {
     width: fit-content;
     padding: 12px 24px;
-    border: 2px solid #EAEAEA;
+    border: 3px solid #EAEAEA;
     border-radius: 999px;
     text-decoration: none;
     font-family: 'ClashDisplay-Variable';
     font-size: 1.8rem;
-    font-weight: 400;
+    font-weight: 500;
     color: #EAEAEA;
-    transition: 0.3; /*te falta una unidad de medida*/
+    transition: 0.3;
+    /*te falta una unidad de medida*/
 }
 
 .boton-primario:hover {
@@ -213,23 +214,20 @@ nav a:hover {
 /* ESTRELLA */
 
 .estrella {
-    width: 240px; /* las medidas van dentro de la etiqueta img, y el alto está mal escrito */
-    height: 240 px;
     animation: girar 8s linear infinite;
+    margin-right: 50px;
 }
 
 /* PRESENTACIÓN*/
 .presentacion {
-    min-height: 100vh; /* en pantallas más grandes el contenido se ve descentrado, te falta un justify */
+    height: 110vh;
+    max-height: 120vh;
+    min-height: 100vh;
     background: #6E6EFF;
     display: flex;
-    padding: 98px 0px 25px 0px;
     flex-direction: column;
     align-items: center;
-    gap: 161px; /* el gap casi siempre tiene la misma característica de los paddings y margins: si es mayor a 80px significa que podés usar otras propiedades de flex para llegar al mismo resultado, fijate cómo te va con justify */
-    position: relative; /* esto por qué? */
-    flex-shrink: 0; /* esto por qué? */
-    align-self: stretch;/* esto por qué? */
+    justify-content:space-around;
 }
 
 /* CONTENIDO */
@@ -238,22 +236,23 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 36px;
-    padding: 0px 50px;
+    gap: 30px;
+    padding: 0px 60px;
+
 }
 
 
 .info {
     display: flex;
+    justify-content:space-between;
+    gap: 35vh;
     align-items: flex-start;
-    gap: 127px;
-    align-self: stretch;
 }
 
 /* HOLA */
 .info h2 {
     font-family: 'ClashDisplay-Variable';
-    font-size: 11.25rem;
+    font-size: 9rem;
     font-weight: 700;
     color: #a7fc00;
     line-height: normal;
