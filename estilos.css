@@ -84,6 +84,11 @@ html {
     scroll-behavior: smooth;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Ajustes especificos*/
 
 body {
@@ -103,11 +108,17 @@ header {
 
 nav {
     width: 100%;
-    min-width: 500px;
     padding: 20px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.menu-hamburguesa {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 /* LOGO */
@@ -612,3 +623,103 @@ footer {
 }
 
 /* RESPONSIVE */
+
+@media screen and (max-width: 500px) {
+
+    /* HEADER & NAV */
+    header {
+        padding: 20px 20px;
+    }
+
+    .menu-hamburguesa {
+        display: block;
+        position: relative;
+        z-index: 2000;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        position: fixed;
+        top: 0px;
+        left: 0;
+        width: 90vw;
+        height: 100vh;
+        background-color: #a7fc00;
+        padding: 60px 40px;
+        gap: 15px;
+        z-index: 1000;
+        border-bottom: 2px solid #6E6EFF;
+    }
+
+    .nav-links.activo {
+        display: flex;
+    }
+
+    .nav-links li {
+        list-style: none;
+    }
+
+    .nav-links a {
+        color: #262223; 
+        font-family: 'ClashDisplay-Bold', sans-serif; 
+        font-size: 2rem;
+        text-decoration: none;
+        line-height: 1;
+        transition: 0.3s;
+    }
+    
+    .hero {
+        flex-direction: column; 
+        height: auto; 
+        margin-top: 40px;
+        position: relative;
+    }
+
+    .contenido {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .mini-line {
+        margin-bottom: 15px;
+    }
+
+    .contenido p {
+        font-size: 1.2rem;
+    }
+
+    .contenido h1 {
+        font-size: 5rem;
+        line-height: 0.9;
+        margin-top: 130px;
+        margin-bottom: 20px;
+    }
+
+    .contenido h1 span {
+        font-size: 5rem;
+        display: block; 
+    }
+
+    .contenido h2 {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+    }
+
+    .boton-primario {
+        font-size: 1.2rem;
+        padding: 10px 25px;
+        border-width: 2px;
+    }
+
+    .estrella {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 110px; 
+        margin-right: 0;
+    }
+
+}

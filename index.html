@@ -22,7 +22,11 @@
                 <img src="img/index-img/logo-mel-blanco.svg" alt="Logo Mel" width="60px" height="47px">
             </a>
 
-            <ul class="nav-links">
+            <button id="menu-hamburguesa" class="menu-hamburguesa">
+                <img src="img/index-img/menu-hamburguesa.svg" alt="Abrir menú">
+            </button>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#">Sobre mi</a></li>
                 <li><a href="#">Proyectos</a></li>
                 <li><a href="#">Contacto</a></li>
@@ -208,3 +212,13 @@
             <p>Mel Design</p>
         </div>
     </footer>
+
+    <script>
+        const btnHamburguesa = document.getElementById('menu-hamburguesa');
+        const navLinks = document.getElementById('nav-links');
+
+        btnHamburguesa.addEventListener('click', () => {
+            navLinks.classList.toggle('activo');
+        });
+    </script>
+</body>
