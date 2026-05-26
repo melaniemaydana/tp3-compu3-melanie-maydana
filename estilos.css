@@ -380,7 +380,8 @@ nav a:hover {
 }
 
 .card-1:hover {
-    background-image: url("img/index-img/card-1-foto.svg");
+    background-image: url("img/index-img/card-1-foto.png");
+    transform: scale(1.05);
 }
 
 .card-1-contenido {
@@ -398,7 +399,8 @@ nav a:hover {
 }
 
 .card-2:hover {
-    background-image: url("img/index-img/card-2-foto.svg");
+    background-image: url("img/index-img/card-2-foto.png");
+        transform: scale(1.05);
 }
 
 .card-2-contenido {
@@ -416,7 +418,8 @@ nav a:hover {
 }
 
 .card-3:hover {
-    background-image: url("img/index-img/card-3-foto.svg");
+    background-image: url("img/index-img/card-3-foto.png");
+    transform: scale(1.05);
 }
 
 .card-3-contenido {
@@ -433,7 +436,8 @@ nav a:hover {
 }
 
 .card-4:hover {
-    background-image: url("img/index-img/card-4-foto.svg");
+    background-image: url("img/index-img/card-4-foto.png");
+    transform: scale(1.05);
 }
 
 .card-4-contenido {
@@ -490,22 +494,3 @@ nav a:hover {
 }
 
 /* RESPONSIVE */
-
-@media(max-width: 500px) {
-
-    .info {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 45px;
-    }
-
-    h1 {
-        font-size: 6rem;
-    }
-
-    .info p {
-        font-size: 0.7rem;
-    }
-
-}
