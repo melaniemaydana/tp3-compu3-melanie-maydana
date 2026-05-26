@@ -296,6 +296,174 @@ nav a:hover {
     animation-direction: reverse;
 }
 
+/*PROYECTOS DESTACADOS*/
+.proyectos-destacados {
+    padding: 100px 80px 30px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 103px;
+}
+
+.titular {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.titular img {
+    animation: girar 10s linear infinite;
+}
+
+.mini-line-2 {
+    width: 49px;
+    height: 6px;
+    background: #DF73FF;
+}
+
+.mi-trabajo p {
+    color: var(--NEGRO-MEL, #262223);
+    font-family: "Fira Code";
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 30px;
+}
+
+.izquierda {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 104px;
+    align-items: flex-start;
+}
+
+.izquierda h2 {
+    display: flex;
+    flex-direction: column;
+    color: var(--NEGRO-MEL, #262223);
+    font-family: "Dx Lactos";
+    font-size: 8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.izquierda h2 span {
+    color: var(--NEGRO-MEL, #262223);
+    font-family: "Clash Display Variable";
+    font-size: 8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 8.75rem;
+}
+
+.proyectos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 30px 60px;
+    gap: 41px;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/*TARJETA 1*/
+
+.card-1 {
+    transition: 0.4s ease;
+}
+
+.card-1:hover {
+    background-image: url("img/index-img/card-1-foto.svg");
+}
+
+.card-1-contenido {
+    transition: opacity 0.3s;
+}
+
+.card-1:hover .card-1-contenido {
+    opacity: 0;
+}
+
+/*TARJETA 2*/
+
+.card-2 {
+    transition: 0.4s ease;
+}
+
+.card-2:hover {
+    background-image: url("img/index-img/card-2-foto.svg");
+}
+
+.card-2-contenido {
+    transition: opacity 0.3s;
+}
+
+.card-2:hover .card-2-contenido {
+    opacity: 0;
+}
+
+/*TARJETA 3*/
+
+.card-3 {
+    transition: 0.4s ease;
+}
+
+.card-3:hover {
+    background-image: url("img/index-img/card-3-foto.svg");
+}
+
+.card-3-contenido {
+    transition: opacity 0.3s;
+}
+
+.card-3:hover .card-3-contenido {
+    opacity: 0;
+}
+
+/*TARJETA 4*/
+.card-4 {
+    transition: 0.4s ease;
+}
+
+.card-4:hover {
+    background-image: url("img/index-img/card-4-foto.svg");
+}
+
+.card-4-contenido {
+    transition: opacity 0.3s;
+}
+
+.card-4:hover .card-4-contenido {
+    opacity: 0;
+}
+
+
+.boton-secundario {
+    width: fit-content;
+    padding: 12px 24px;
+    border: 2px solid #262223;
+    border-radius: 999px;
+    text-decoration: none;
+    font-family: 'ClashDisplay-Variable';
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #262626;
+    transition: 0.3;
+}
+
+.boton-secundario:hover {
+    border: 2px linear-gradient(90deg, #6E6EFF 20%, #262223 100%);
+    background: var(--Gradiente-botones, linear-gradient(90deg, #6E6EFF 20%, #262223 100%));
+    color: #EAEAEA;
+}
+
 /* ANIMACION */
 
 @keyframes scroll {
