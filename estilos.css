@@ -144,9 +144,21 @@ nav {
     transition: 0.3s;
 }
 
+.nav-invertido .nav-links a {
+    color: #262223;
+}
+
+.nav-invertido .menu-hamburguesa img {
+    filter: invert(1);
+}
+
 /* HOVER */
 nav a:hover {
     color: #a7fc00;
+}
+
+.nav-invertido .nav-links a:hover {
+    color: #eaeaea;
 }
 
 /* HERO */
@@ -379,8 +391,8 @@ nav a:hover {
 
 .estrella-proyectos {
     position: absolute;
-    right: 0;        
-    bottom: 0; 
+    right: 0;
+    bottom: 0;
     width: 280px;
     animation: girar 10s linear infinite;
 }
@@ -608,6 +620,122 @@ footer {
     line-height: normal;
 }
 
+/*SOBRE MI HTML*/
+
+/*HERO SOBRE MI*/
+
+.header-sobre-mi {
+    background: linear-gradient(180deg, #DF73FF 0%, #EAEAEA 100%);
+}
+
+.header-sobre-mi .contenido p,
+.header-sobre-mi .contenido h2 {
+    color: #262223;
+}
+
+.line-oscura {
+    background-color: #262223;
+}
+
+.hero-sobre-mi .contenido h2 {
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 8rem;
+}
+
+.hero-sobre-mi .contenido h2 span {
+    font-family: 'Dx Lactos', sans-serif; 
+    font-size: 9rem; 
+    color: #262223;
+}
+
+.ilustracion-gato {
+margin-right: 50px;
+}
+
+.boton-flecha {
+    position: relative;
+    display: inline-block;
+    width: 60px;  
+    height: 60px;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.boton-flecha:hover {
+    transform: translateY(5px);
+}
+
+.flecha-normal,
+.flecha-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.4s ease;
+}
+
+.flecha-hover {
+    opacity: 0;
+}
+
+.boton-flecha:hover .flecha-normal {
+    opacity: 0;
+}
+
+.boton-flecha:hover .flecha-hover {
+    opacity: 1;
+}
+
+.contenedor-gatito {
+    position: relative;
+    margin-right: 50px;
+    width: 250px;
+    height: 250px;
+}
+
+.gatito-base,
+.gatito-animado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+}
+
+.gatito-animado {
+    opacity: 0;
+    animation: moverOjos 4s infinite; 
+}
+
+/* ---  ARTICULO SOBRE MI --- */
+.sobre-mi-detalle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 100px 80px; 
+    min-height: 100vh;
+}
+
+.texto-mel {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 500px;
+}
+
+.texto-mel p {
+    font-size: 1.3rem; 
+    line-height: 1.6;
+    color: #262223;
+}
+
+.datos-importantes span {
+    color: #6E6EFF;
+    font-weight: 700;
+}
+
 /* ANIMACION */
 
 @keyframes scroll {
@@ -633,6 +761,15 @@ footer {
     }
 }
 
+@keyframes moverOjos {
+    0% { opacity: 0; }
+    40% { opacity: 0; }   
+    45% { opacity: 1; } 
+    85% { opacity: 1; }  
+    90% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
 /* RESPONSIVE */
 
 @media screen and (max-width: 500px) {
@@ -647,7 +784,7 @@ footer {
         position: relative;
         z-index: 2000;
     }
-    
+
     .nav-links {
         display: none;
         flex-direction: column;
@@ -674,17 +811,17 @@ footer {
     }
 
     .nav-links a {
-        color: #262223; 
-        font-family: 'ClashDisplay-Bold', sans-serif; 
+        color: #262223;
+        font-family: 'ClashDisplay-Bold', sans-serif;
         font-size: 2rem;
         text-decoration: none;
         line-height: 1;
         transition: 0.3s;
     }
-    
+
     .hero {
-        flex-direction: column; 
-        height: auto; 
+        flex-direction: column;
+        height: auto;
         margin-top: 40px;
         position: relative;
     }
@@ -711,7 +848,7 @@ footer {
 
     .contenido h1 span {
         font-size: 7rem;
-        display: block; 
+        display: block;
     }
 
     .contenido h2 {
@@ -724,7 +861,7 @@ footer {
         position: absolute;
         top: 60px;
         left: 0;
-        width: 110px; 
+        width: 110px;
         margin-right: 0;
     }
 
@@ -737,16 +874,16 @@ footer {
     }
 
     .contenido-presentacion {
-        padding: 0px 20px; 
+        padding: 0px 20px;
         gap: 30px;
         align-items: flex-end;
         width: 100%;
     }
 
     .info {
-        flex-direction: column; 
-        gap: 20px; 
-        width: 100%; 
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
         align-items: center;
     }
 
@@ -756,10 +893,10 @@ footer {
     }
 
     .info p {
-        width: 390px; 
-        padding: 25px 20px; 
-        font-size: 1rem; 
-        border-radius: 30px; 
+        width: 390px;
+        padding: 25px 20px;
+        font-size: 1rem;
+        border-radius: 30px;
     }
 
     .boton-primario {
@@ -799,14 +936,14 @@ footer {
         margin-bottom: 5px;
     }
 
-    .izquierda h2, 
+    .izquierda h2,
     .izquierda h2 span {
         font-size: 3.8rem;
         line-height: 4.5rem;
     }
 
     .estrella-proyectos {
-        position: static;   
+        position: static;
         width: 110px;
         margin: 10px 0;
     }
@@ -817,38 +954,41 @@ footer {
         padding: 0 0 50px 20px;
         gap: 40px;
         align-items: flex-end;
-}
+    }
 
-.cards {
+    .cards {
         display: flex;
         justify-content: flex-start;
         overflow-x: auto;
         gap: 20px;
         padding-right: 20px;
-        scroll-snap-type: x mandatory; 
+        scroll-snap-type: x mandatory;
         scrollbar-width: none;
-}
+    }
 
-.card-1-contenido img {
-    height: 467px;
-}
+    .card-1-contenido img {
+        height: 467px;
+    }
 
-.card-2-contenido img {
-    height: 467px;
-}
+    .card-2-contenido img {
+        height: 467px;
+    }
 
-.card-3-contenido img {
-    height: 467px;
-}
+    .card-3-contenido img {
+        height: 467px;
+    }
 
-.card-4-contenido img {
-    height: 467px;
-}
+    .card-4-contenido img {
+        height: 467px;
+    }
 
-.card-1, .card-2, .card-3, .card-4 {
-        min-width: 75%; 
+    .card-1,
+    .card-2,
+    .card-3,
+    .card-4 {
+        min-width: 75%;
         scroll-snap-align: center;
-        transform: none;  
+        transform: none;
     }
 
     .proyectos .boton-secundario {
@@ -857,10 +997,11 @@ footer {
         padding: 8px 20px;
     }
 
-/*FOOTER*/
+
+    /*FOOTER*/
     footer {
-        height: auto; 
-        padding: 60px 20px 40px 20px; 
+        height: auto;
+        padding: 60px 20px 40px 20px;
         gap: 60px;
     }
 
@@ -886,11 +1027,11 @@ footer {
     }
 
     .trabajemos-juntos h3 {
-        width: 100%; 
+        width: 100%;
         font-size: 3.5rem;
         line-height: 1.2;
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     .contacto {
