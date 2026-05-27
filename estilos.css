@@ -319,11 +319,13 @@ nav a:hover {
     gap: 103px;
 }
 
+
 .titular {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    position: relative;
 }
 
 .titular img {
@@ -352,6 +354,7 @@ nav a:hover {
     justify-content: space-between;
     gap: 104px;
     align-items: flex-start;
+    width: 100%;
 }
 
 .izquierda h2 {
@@ -372,6 +375,14 @@ nav a:hover {
     font-style: normal;
     font-weight: 500;
     line-height: 8.75rem;
+}
+
+.estrella-proyectos {
+    position: absolute;
+    right: 0;        
+    bottom: 0; 
+    width: 280px;
+    animation: girar 10s linear infinite;
 }
 
 .proyectos {
@@ -764,6 +775,140 @@ footer {
     .slide-track img {
         height: 50px;
         width: auto;
+    }
+
+    /*PROYECTOS DESTACADOS*/
+    .proyectos-destacados {
+        padding: 60px 20px 20px 20px;
+        gap: 60px;
+    }
+
+    .titular {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .izquierda {
+        gap: 15px;
+    }
+
+    .mi-trabajo p {
+        font-size: 1.2rem;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    .izquierda h2, 
+    .izquierda h2 span {
+        font-size: 3.8rem;
+        line-height: 4.5rem;
+    }
+
+    .estrella-proyectos {
+        position: static;   
+        width: 110px;
+        margin: 10px 0;
+    }
+
+
+    .proyectos {
+        height: auto;
+        padding: 0 0 50px 20px;
+        gap: 40px;
+        align-items: flex-end;
+}
+
+.cards {
+        display: flex;
+        justify-content: flex-start;
+        overflow-x: auto;
+        gap: 20px;
+        padding-right: 20px;
+        scroll-snap-type: x mandatory; 
+        scrollbar-width: none;
+}
+
+.card-1-contenido img {
+    height: 467px;
+}
+
+.card-2-contenido img {
+    height: 467px;
+}
+
+.card-3-contenido img {
+    height: 467px;
+}
+
+.card-4-contenido img {
+    height: 467px;
+}
+
+.card-1, .card-2, .card-3, .card-4 {
+        min-width: 75%; 
+        scroll-snap-align: center;
+        transform: none;  
+    }
+
+    .proyectos .boton-secundario {
+        margin-right: 20px;
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+
+/*FOOTER*/
+    footer {
+        height: auto; 
+        padding: 60px 20px 40px 20px; 
+        gap: 60px;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .footer-nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .trabajemos-juntos {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .trabajemos-juntos h3 {
+        width: 100%; 
+        font-size: 3.5rem;
+        line-height: 1.2;
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .contacto {
+        gap: 15px;
+    }
+
+    .contacto ul {
+        gap: 15px;
+    }
+
+    .contacto a {
+        font-size: 0.9rem;
+    }
+
+    .copyright {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 20px;
     }
 
 }
