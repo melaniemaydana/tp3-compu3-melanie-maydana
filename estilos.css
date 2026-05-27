@@ -1,7 +1,7 @@
 /*CSS Documment*/
 @charset "UTF-8";
 
-/*Ajustes Generales*/
+/*---AJUSTES GENERALES---*/
 
 @font-face {
     font-family: "ClashDisplay-Extralight";
@@ -89,11 +89,13 @@ img {
     height: auto;
 }
 
-/* Ajustes especificos*/
-
 body {
     background-color: #eaeaea;
 }
+
+/*---AJUSTES ESPECIFICOS---*/
+
+/*---INDEX HTML---*/
 
 /* HEADER */
 header {
@@ -229,8 +231,7 @@ nav a:hover {
     font-size: 1.8rem;
     font-weight: 500;
     color: #EAEAEA;
-    transition: 0.3;
-    /*te falta una unidad de medida*/
+    transition: 0.3s;
 }
 
 .boton-primario:hover {
@@ -507,6 +508,8 @@ nav a:hover {
     color: #EAEAEA;
 }
 
+/*FOOTER*/
+
 footer {
     background-color: #262223;
     display: flex;
@@ -620,7 +623,7 @@ footer {
     line-height: normal;
 }
 
-/*SOBRE MI HTML*/
+/*---SOBRE MI HTML---*/
 
 /*HERO SOBRE MI*/
 
@@ -708,7 +711,7 @@ footer {
     animation: moverOjos 4s infinite;
 }
 
-/* ---  ARTICULO SOBRE MI --- */
+/*ARTICULO SOBRE MI*/
 .sobre-mi-detalle {
     display: flex;
     justify-content: center;
@@ -925,7 +928,11 @@ footer {
     line-height: normal;
 }
 
-/* ANIMACION */
+/*---PROYECTOS HTML---*/
+
+
+
+/*---ANIMACION---*/
 
 @keyframes scroll {
 
