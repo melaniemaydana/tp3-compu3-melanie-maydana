@@ -929,7 +929,36 @@ footer {
 }
 
 /*---PROYECTOS HTML---*/
+.header-proyectos {
+    background: linear-gradient(180deg, var(--VERDE-MEL, #A7FC00) 0%, #EAEAEA 60.47%);
+}
 
+.header-proyectos .contenido p,
+.header-proyectos .contenido h2 {
+    color: #262223;
+}
+
+.hero-proyectos .contenido h2 {
+    font-weight: 500;
+    line-height: 1.1;
+    font-size: 8rem;
+}
+
+.hero-proyectos .contenido h2 span {
+    font-family: 'Dx Lactos', sans-serif;
+    font-size: 8rem;
+    color: #262223;
+}
+
+.estrella-hero-proyectos {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%) scale(1); 
+    width: 200px;
+    z-index: 1;
+    animation: pulsarSuave 2s ease-in-out infinite; 
+}
 
 
 /*---ANIMACION---*/
@@ -990,6 +1019,18 @@ footer {
 
     100% {
         transform: translateX(-50%);
+    }
+}
+
+@keyframes pulsarSuave {
+    0% {
+        transform: translateY(-50%) scale(1);
+    }
+    50% {
+        transform: translateY(-50%) scale(1.2);
+    }
+    100% {
+        transform: translateY(-50%) scale(1);
     }
 }
 
