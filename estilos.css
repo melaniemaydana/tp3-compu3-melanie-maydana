@@ -736,6 +736,41 @@ margin-right: 50px;
     font-weight: 700;
 }
 
+/*SLIDER PERFIL PROFESIONAL*/
+
+.cinta-perfil-profesional {
+    background-color: #262223;
+    width: 100%;
+    padding: 30px 0;
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+}
+
+.cinta-track {
+    display: flex;
+    animation: desplazamientoCinta 15s linear infinite;
+}
+
+.cinta-contenido {
+    display: flex;
+    align-items: center;
+    gap: 40px; 
+    padding-right: 40px;
+}
+
+.cinta-contenido h3 {
+    font-family: 'ClashDisplay-Bold', sans-serif;
+    font-size: 3rem;
+    color: #EAEAEA;
+    margin: 0;
+}
+
+
+.cinta-contenido img {
+    animation: girar 5s linear infinite; 
+}
+
 /* ANIMACION */
 
 @keyframes scroll {
@@ -768,6 +803,15 @@ margin-right: 50px;
     85% { opacity: 1; }  
     90% { opacity: 0; }
     100% { opacity: 0; }
+}
+
+@keyframes desplazamientoCinta {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 /* RESPONSIVE */
