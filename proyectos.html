@@ -39,13 +39,78 @@
                 <p>Estos son</p>
                 <h2>Mis<br><span>Proyectos</span></h2>
 
-                    <a href="#" class="boton-flecha">
-                        <img class="flecha-normal" src="img/sobre-mi-img/flecha.svg" alt="Bajar">
-                        <img class="flecha-hover" src="img/sobre-mi-img/flechita-hover.svg" alt="Bajar con degradé">
-                    </a>
+                <a href="#mas-abajo" class="boton-flecha">
+                    <img class="flecha-normal" src="img/sobre-mi-img/flecha.svg" alt="Bajar">
+                    <img class="flecha-hover" src="img/sobre-mi-img/flechita-hover.svg" alt="Bajar con degradé">
+                </a>
             </div>
 
-            <img class="estrella-hero-proyectos" src="img/proyectos-img/estrella-rosa-2.svg" alt="estrella rosa 2" width="200px">
+            <img class="estrella-hero-proyectos" src="img/proyectos-img/estrella-rosa-2.svg" alt="estrella rosa 2"
+                width="200px">
         </div>
 
     </header>
+
+
+
+    <main>
+        <!--IMAGENES PROYECTOS-->
+
+        <!--LAPSUS-->
+        <section id="mas-abajo" class="lista-proyectos">
+
+            <article class="proyecto-item">
+
+                <div class="proyecto-encabezado">
+                    <h3 class="proyecto-titulo"><span>/01</span> LAPSUS</h3>
+                    <span class="proyecto-tag bg-verde">DISEÑO DE IDENTIDAD</span>
+                </div>
+
+                <div class="proyecto-imagen-contenedor">
+                    <img class="imagen-estatica" src="img/proyectos-img/lapsus.jpg" alt="Lapsus Estático" height="1440px">
+                    <img class="imagen-gif" src="img/proyectos-img/gif-lapsus-pagina.gif" alt="Lapsus Animado" width="1440px">
+                </div>
+
+                <p class="proyecto-descripcion">Diseño de identidad completo para micro-museo basado en la
+                    procrastinación, incluyendo logo, paleta cromática, tipografías, redes sociales, piezas editoriales
+                    y aplicaciones.</p>
+
+                <div class="separador-linea"></div>
+            </article>
+
+            <!--INTELIGENCIA ARTIFICIAL-->
+
+            <article class="proyecto-item">
+                <div class="proyecto-encabezado">
+                    <h3 class="proyecto-titulo"><span>/02</span> IA</h3>
+                    <span class="proyecto-tag bg-verde">BOOKZINE</span>
+                </div>
+                <div class="proyecto-imagen-contenedor">
+                    <img class="imagen-estatica" src="img/proyectos-img/ia.png" alt="IA Estático" width="1440px">
+                    <img class="imagen-gif" src="img/proyectos-img/gif-ia-pagina.gif" alt="IA Animado" width="1440px">
+                </div>
+                <p class="proyecto-descripcion">Diseño editorial para bookzine abordando la temática de Inteligencia
+                    Artificial e incluyendo distintos artículos, datos estadísticos, catálogos e infografías.</p>
+                <div class="separador-linea"></div>
+            </article>
+        </section>
+    </main>
+    <script>
+        const imagenesProyecto = document.querySelectorAll('.proyecto-imagen-contenedor');
+
+        imagenesProyecto.forEach(contenedor => {
+            contenedor.addEventListener('click', () => {
+            
+                contenedor.classList.toggle('activo');
+            });
+        });
+    </script>
+    <script>
+        const btnHamburguesa = document.getElementById('menu-hamburguesa');
+        const navLinks = document.getElementById('nav-links');
+
+        btnHamburguesa.addEventListener('click', () => {
+            navLinks.classList.toggle('activo');
+        });
+    </script>
+</body>

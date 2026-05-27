@@ -929,6 +929,8 @@ footer {
 }
 
 /*---PROYECTOS HTML---*/
+
+/*NAV Y HERO*/
 .header-proyectos {
     background: linear-gradient(180deg, var(--VERDE-MEL, #A7FC00) 0%, #EAEAEA 60.47%);
 }
@@ -958,6 +960,103 @@ footer {
     width: 200px;
     z-index: 1;
     animation: pulsarSuave 2s ease-in-out infinite; 
+}
+
+/*GALERIA DE PROYECTOS*/
+.lista-proyectos {
+    padding: 80px 100px;
+    background-color: #EAEAEA;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.proyecto-item {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.proyecto-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.proyecto-titulo {
+    font-family: 'ClashDisplay-Variable', sans-serif;
+    font-size: 5rem;
+    font-weight: 500;
+    color: #262223;
+    margin: 0;
+    line-height: 1;
+}
+
+.proyecto-titulo span {
+    font-weight: 300;
+    margin-right: 15px;
+}
+
+
+.proyecto-tag {
+    font-family: 'ClashDisplay-Variable', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #262223;
+    padding: 8px 25px;
+    border-radius: 999px;
+    border: 2px solid #262223;
+}
+
+
+.proyecto-imagen-contenedor {
+    position: relative;
+    width: 100%;
+    border-radius: 40px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #262223;
+}
+
+.imagen-estatica,
+.imagen-gif {
+    width: 100%;
+    height: 700px;
+    display: block;
+    object-fit: cover;
+    transition: opacity 0.4s ease;
+}
+
+.imagen-gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 0;
+}
+
+.proyecto-imagen-contenedor.activo .imagen-estatica {
+    opacity: 0;
+}
+
+.proyecto-imagen-contenedor.activo .imagen-gif {
+    opacity: 1;
+}
+
+
+.proyecto-descripcion {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.2rem;
+    color: #262223;
+    max-width: 100%;
+    line-height: 1.5;
+}
+
+.separador-linea {
+    width: 100%;
+    height: 2px;
+    background-color: #262223;
+    margin-top: 20px;
 }
 
 
