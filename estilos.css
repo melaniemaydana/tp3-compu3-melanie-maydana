@@ -644,19 +644,19 @@ footer {
 }
 
 .hero-sobre-mi .contenido h2 span {
-    font-family: 'Dx Lactos', sans-serif; 
-    font-size: 9rem; 
+    font-family: 'Dx Lactos', sans-serif;
+    font-size: 9rem;
     color: #262223;
 }
 
 .ilustracion-gato {
-margin-right: 50px;
+    margin-right: 50px;
 }
 
 .boton-flecha {
     position: relative;
     display: inline-block;
-    width: 60px;  
+    width: 60px;
     height: 60px;
     margin-top: 20px;
     transition: transform 0.3s ease;
@@ -705,7 +705,7 @@ margin-right: 50px;
 
 .gatito-animado {
     opacity: 0;
-    animation: moverOjos 4s infinite; 
+    animation: moverOjos 4s infinite;
 }
 
 /* ---  ARTICULO SOBRE MI --- */
@@ -714,7 +714,7 @@ margin-right: 50px;
     justify-content: center;
     align-items: center;
     gap: 100px;
-    padding: 100px 80px; 
+    padding: 100px 80px;
     min-height: 100vh;
 }
 
@@ -726,7 +726,7 @@ margin-right: 50px;
 }
 
 .texto-mel p {
-    font-size: 1.3rem; 
+    font-size: 1.3rem;
     line-height: 1.6;
     color: #262223;
 }
@@ -755,7 +755,7 @@ margin-right: 50px;
 .cinta-contenido {
     display: flex;
     align-items: center;
-    gap: 40px; 
+    gap: 40px;
     padding-right: 40px;
 }
 
@@ -768,7 +768,7 @@ margin-right: 50px;
 
 
 .cinta-contenido img {
-    animation: girar 5s linear infinite; 
+    animation: girar 5s linear infinite;
 }
 
 /*DESPLEGABLES*/
@@ -780,9 +780,17 @@ margin-right: 50px;
     border-top: 2px solid #262223;
 }
 
-.bg-verde { background-color: #A7FC00; }
-.bg-rosa { background-color: #E6A8FF;}
-.bg-violeta { background-color: #6E6EFF; }
+.bg-verde {
+    background-color: #A7FC00;
+}
+
+.bg-rosa {
+    background-color: #E6A8FF;
+}
+
+.bg-violeta {
+    background-color: #6E6EFF;
+}
 
 .acordeon-item {
     border-bottom: 2px solid #262223;
@@ -810,7 +818,7 @@ margin-right: 50px;
     font-size: 3rem;
     font-weight: 500;
     color: #262223;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
 
 .acordeon-details {
@@ -829,7 +837,7 @@ margin-right: 50px;
 }
 
 .acordeon-item.activo .icono-acordeon {
-    transform: rotate(45deg); 
+    transform: rotate(45deg);
 }
 
 .cv-entrada {
@@ -888,6 +896,35 @@ margin-right: 50px;
     gap: 20px;
 }
 
+/*FRASE*/
+.frase {
+    display: flex;
+    justify-content: space-between;
+    height: 60vh;
+    padding: 80px 100px;
+    align-items: center;
+    gap: 320px;
+    align-self: stretch;
+}
+
+.frase p {
+    color: #262223;
+    font-family: "ClashDisplay-Variable";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.frase p strong {
+    color: var(--VIOLETA-MEL, #6E6EFF);
+    font-family: "ClashDisplay-Variable";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
 /* ANIMACION */
 
 @keyframes scroll {
@@ -914,18 +951,36 @@ margin-right: 50px;
 }
 
 @keyframes moverOjos {
-    0% { opacity: 0; }
-    40% { opacity: 0; }   
-    45% { opacity: 1; } 
-    85% { opacity: 1; }  
-    90% { opacity: 0; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 @keyframes desplazamientoCinta {
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-50%);
     }
