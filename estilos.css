@@ -771,6 +771,123 @@ margin-right: 50px;
     animation: girar 5s linear infinite; 
 }
 
+/*DESPLEGABLES*/
+
+.seccion-cv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid #262223;
+}
+
+.bg-verde { background-color: #A7FC00; }
+.bg-rosa { background-color: #E6A8FF;}
+.bg-violeta { background-color: #6E6EFF; }
+
+.acordeon-item {
+    border-bottom: 2px solid #262223;
+    overflow: hidden;
+}
+
+.acordeon-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 90px;
+    cursor: pointer;
+}
+
+.acordeon-summary h3 {
+    font-family: 'ClashDisplay-Variable', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #262223;
+    margin: 0;
+}
+
+.icono-acordeon {
+    font-family: 'ClashDisplay-Variable', sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #262223;
+    transition: transform 0.3s ease; 
+}
+
+.acordeon-details {
+    max-height: 0;
+    padding: 0 100px;
+    opacity: 0;
+    transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.4s ease;
+    font-family: 'Fira Code', monospace;
+    color: #262223;
+}
+
+.acordeon-item.activo .acordeon-details {
+    max-height: 800px;
+    padding-bottom: 60px;
+    opacity: 1;
+}
+
+.acordeon-item.activo .icono-acordeon {
+    transform: rotate(45deg); 
+}
+
+.cv-entrada {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.cv-entrada:last-child {
+    margin-bottom: 0;
+}
+
+.cv-fecha {
+    font-weight: 600;
+    font-size: 1.1rem;
+    min-width: 150px;
+}
+
+.cv-info {
+    max-width: 600px;
+}
+
+.cv-info h4 {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.cv-info p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.cv-info ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.cv-info ul li {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.cv-info ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+}
+
+.acordeon-details .herramientas {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
 /* ANIMACION */
 
 @keyframes scroll {

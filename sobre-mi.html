@@ -92,7 +92,7 @@
                     <h3>PERFIL PROFESIONAL</h3>
                     <img src="img/sobre-mi-img/estrella-verde.svg" alt="Estrella verde" width="45px">
                 </div>
-                
+
                 <div class="cinta-contenido">
                     <h3>PERFIL PROFESIONAL</h3>
                     <img src="img/sobre-mi-img/estrella-verde.svg" alt="Estrella verde" width="45px">
@@ -105,4 +105,113 @@
                 </div>
             </div>
         </section>
+
+        <!--ACORDEONES-->
+
+        <!--EDUCACIÓN-->
+        <section class="seccion-cv">
+
+            <div class="acordeon-item bg-verde">
+                <div class="acordeon-summary">
+                    <h3>Educación</h3>
+                    <span class="icono-acordeon">+</span>
+                </div>
+                <div class="acordeon-details">
+                    <div class="cv-entrada">
+                        <div class="cv-fecha">2022-Presente</div>
+                        <div class="cv-info">
+                            <h4>Licenciatura en Diseño y Comunicación Visual</h4>
+                            <p>Universidad Nacional de Lanús</p>
+                        </div>
+                    </div>
+                    <div class="cv-entrada">
+                        <div class="cv-fecha">2019-2020</div>
+                        <div class="cv-info">
+                            <h4>Fotografía</h4>
+                            <p>Foto Escuela, Adrogué</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--EXPERIENCIA-->
+            <div class="acordeon-item bg-rosa">
+                <div class="acordeon-summary">
+                    <h3>Experiencia Laboral</h3>
+                    <span class="icono-acordeon">+</span>
+                </div>
+                <div class="acordeon-details">
+                    <div class="cv-entrada">
+                        <div class="cv-fecha">2024-Presente</div>
+                        <div class="cv-info">
+                            <h4>Diseñadora Gráfica Freelance</h4>
+                            <p>Trabajo con clientes desarrollando soluciones visuales adaptadas a sus necesidades:</p>
+                            <ul>
+                                <li>Identidad de marca</li>
+                                <li>Piezas para redes sociales</li>
+                                <li>Diseño editorial</li>
+                                <li>Packaging</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cv-entrada">
+                        <div class="cv-fecha">2026-Presente</div>
+                        <div class="cv-info">
+                            <h4>Practicante de Diseño - Raw Creative Studio</h4>
+                            <ul>
+                                <li>Diseño de contenido para redes</li>
+                                <li>Desarrollo de propuestas de branding</li>
+                                <li>Trabajo en equipo con otros diseñadores</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--HERRAMIENTAS-->
+            <div class="acordeon-item bg-violeta">
+                <div class="acordeon-summary">
+                    <h3>Herramientas</h3>
+                    <span class="icono-acordeon">+</span>
+                </div>
+                <div class="acordeon-details">
+                    <ul class="herramientas">
+                        <li><img src="img/sobre-mi-img/ai.svg" alt="adobe illustrator" width="80px"></li>
+                        <li><img src="img/sobre-mi-img/ps.svg" alt="adobe photoshop" width="80px"></li>
+                        <li><img src="img/sobre-mi-img/lr.svg" alt="adobe lightroom" width="80px"></li>
+                        <li><img src="img/sobre-mi-img/id.svg" alt="adobe indesign" width="80px"></li>
+                        <li><img src="img/sobre-mi-img/figma.svg" alt="figma" width="80px"></li>
+                    </ul>
+                </div>
+            </div>
+
     </main>
+
+    <script>
+        const headersAcordeon = document.querySelectorAll('.acordeon-summary');
+
+        headersAcordeon.forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+
+
+                document.querySelectorAll('.acordeon-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('activo');
+                    }
+                });
+
+
+                item.classList.toggle('activo');
+            });
+        });
+    </script>
+    <script>
+        const btnHamburguesa = document.getElementById('menu-hamburguesa');
+        const navLinks = document.getElementById('nav-links');
+
+        btnHamburguesa.addEventListener('click', () => {
+            navLinks.classList.toggle('activo');
+        });
+    </script>
+</body>
