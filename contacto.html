@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Mel Design</title>
+    <link rel="icon" type="image/xicon" href="img/favicon.ico">
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <header class="header-contacto">
+        <!--NAV INVERTIDO-->
+        <nav class="nav-invertido">
+            <a href="index.html" class="logo">
+                <img src="img/sobre-mi-img/logo-mel-negro.svg" alt="Logo Mel" width="60px" height="47px">
+            </a>
+
+            <button class="menu-hamburguesa" id="menu-hamburguesa">
+                <img src="img/index-img/menu-hamburguesa.svg" alt="Abrir menú">
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="sobre-mi.html">Sobre mi</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!--HERO-->
+        <div class="hero hero-contacto">
+            <div class="contenido">
+                <div class="mini-line line-oscura"></div>
+                <p>¿Estas listx?</p>
+                <h2>¡Trabajemos<br><span>Juntxs!</span></h2>
+                <div class="descripcion">
+                    <p>Completa el formulario y me pongo en contacto con vos a la brevedad.</p>
+                </div>
+            </div>
+
+            <img class="estrella-hero-contacto" src="img/contacto-img/estrella-verde-2.svg" alt="estrella verde 2"
+                width="200px">
+        </div>
+
+    </header>
+
+    <main>
+        <!--FORMULARIO -->
+        <section class="formulario">
+
+            <form action="https://formsubmit.co/melaniemaydana@gmail.com" method="POST" class="formulario-contacto">
+                <input type="hidden" name="_captcha" value="false">
+
+                <input type="hidden" name="_next" value="https://melaniemaydana.github.io/tp3-compu3-melanie-maydana/">
+
+                <div class="fila-form">
+                    <input type="text" name="nombre" placeholder="Nombre" required>
+                    <input type="tel" name="telefono" placeholder="Teléfono" required>
+                </div>
+
+
+                <input type="email" name="mail" placeholder="Mail" class="input-completo" required>
+
+
+                <textarea name="mensaje" placeholder="Escribí tu mensaje acá..." required></textarea>
+
+
+                <button type="submit" class="boton-secundario">Enviar</button>
+
+            </form>
+
+        </section>
+    </main>

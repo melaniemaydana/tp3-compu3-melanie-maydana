@@ -1066,6 +1066,107 @@ footer {
     margin-top: 20px;
 }
 
+/*---CONTACTO HTML---*/
+
+/*NAV Y HERO*/
+.header-contacto {
+    background: linear-gradient(180deg, #6E6EFF 0%, #EAEAEA 67.01%);
+}
+
+.header-contacto .contenido p,
+.header-contacto .contenido h2 {
+    color: #262223;
+}
+
+.hero-contacto .contenido h2 {
+    font-family: "Nebulica-Variable";
+    font-weight: 400;
+    line-height: 1.1;
+    font-size: 8rem;
+}
+
+.hero-contacto .contenido h2 span {
+    font-family: 'Nebulica-Variable', sans-serif;
+    font-size: 8rem;
+    color: #262223;
+    font-weight: 900;
+}
+
+.descripcion p {
+font-size: 1.5rem;
+}
+
+.hero-contacto {
+    position: relative;
+}
+
+.estrella-hero-contacto {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%) rotateY(0deg); 
+    width: 200px;
+    z-index: 1;
+    animation: girarMoneda 4s linear infinite; 
+}
+
+/*FORMULARIO*/
+
+.formulario {
+    padding: 80px 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.formulario-contacto {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fila-form {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.fila-form input {
+    flex: 1;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 18px 25px;
+    background-color: #D0CFCF;
+    border: 2px solid #262223;
+    border-radius: 20px;
+    font-family: 'ClashDisplay-Variable', sans-serif;
+    font-size: 1.1rem;
+    color: #262223;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.formulario-contacto textarea {
+    height: 350px; 
+    resize: none;
+    border-radius: 16px; 
+}
+
+.formulario-contacto input::placeholder,
+.formulario-contacto textarea::placeholder {
+    color: #262223;
+    opacity: 0.8;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+    border-color: #6E6EFF;
+    border-width: 2px;
+}
 
 /*---ANIMACION---*/
 
@@ -1137,6 +1238,17 @@ footer {
     }
     100% {
         transform: translateY(-50%) scale(1);
+    }
+}
+
+@keyframes girarMoneda {
+    0% {
+        /* Arranca de frente */
+        transform: translateY(-50%) rotateY(0deg);
+    }
+    100% {
+        /* Da una vuelta completa sobre su eje vertical */
+        transform: translateY(-50%) rotateY(360deg);
     }
 }
 
