@@ -501,11 +501,11 @@ nav a:hover {
     font-size: 1.8rem;
     font-weight: 400;
     color: #262626;
-    transition: 0.3;
+    transition: 0.3s;
 }
 
 .boton-secundario:hover {
-    border: 2px linear-gradient(90deg, #6E6EFF 20%, #262223 100%);
+    border: transparent;
     background: var(--Gradiente-botones, linear-gradient(90deg, #6E6EFF 20%, #262223 100%));
     color: #EAEAEA;
 }
@@ -1219,6 +1219,27 @@ font-size: 1.5rem;
     font-size: 1.1rem;
     color: #262223;
     line-height: 1.5;
+}
+
+/* FOOTER CORTO*/
+
+.footer-corto {
+    height: auto;
+    padding: 80px 100px;
+    background-color: #262223;
+    display: flex;
+    justify-content: center;
+}
+
+.columnas-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+}
+
+.titulo-oculto {
+    visibility: hidden; 
 }
 
 /*---ANIMACION---*/
