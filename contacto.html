@@ -76,3 +76,64 @@
 
         </section>
     </main>
+    <div id="popup-gracias" class="popup-oculto">
+        <div class="popup-contenido">
+            <img src="img/index-img/estrella-rosa-oscuro.svg" alt="Estrella" width="60px" class="estrella-popup">
+            <h3>¡Gracias!</h3>
+            <p>Tu mensaje se envió correctamente. Me voy a poner en contacto con vos a la brevedad.</p>
+            <button id="cerrar-popup" class="boton-enviar">Cerrar</button>
+        </div>
+    </div>
+
+    <script>
+        const btnHamburguesa = document.getElementById('menu-hamburguesa');
+        const navLinks = document.getElementById('nav-links');
+
+        btnHamburguesa.addEventListener('click', () => {
+            navLinks.classList.toggle('activo');
+        });
+    </script>
+
+<script>
+        
+        const formulario = document.querySelector('.formulario-contacto');
+        const popup = document.getElementById('popup-gracias');
+        const btnCerrarPopup = document.getElementById('cerrar-popup');
+
+        
+        formulario.addEventListener('submit', function(evento) {
+            
+            
+            evento.preventDefault(); 
+            
+            
+            const formData = new FormData(formulario);
+
+            
+            fetch(formulario.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json' 
+                }
+            })
+            .then(respuesta => {
+                if (respuesta.ok) {
+                    
+                    popup.classList.replace('popup-oculto', 'popup-activo');
+                    formulario.reset(); 
+                } else {
+                    alert('Hubo un problema al enviar. Por favor, intentá de nuevo.');
+                }
+            })
+            .catch(error => {
+                alert('Hubo un problema de conexión. Por favor, intentá de nuevo.');
+            });
+        });
+
+        
+        btnCerrarPopup.addEventListener('click', () => {
+            popup.classList.replace('popup-activo', 'popup-oculto');
+        });
+    </script>
+</body>

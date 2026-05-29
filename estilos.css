@@ -1168,6 +1168,59 @@ font-size: 1.5rem;
     border-width: 2px;
 }
 
+/*POP UP GRACIAS*/
+
+.popup-oculto {
+    display: none;
+}
+
+.popup-activo {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(38, 34, 35, 0.8);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.popup-contenido {
+    background-color: #EAEAEA;
+    padding: 50px;
+    border-radius: 40px;
+    border: 2px solid #262223;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 10px 10px 0px #A7FC00;
+}
+
+.estrella-popup {
+    animation: pulsarSuave 2s ease-in-out infinite;
+}
+
+.popup-contenido h3 {
+    font-family: 'Nebulica-Variable', sans-serif;
+    font-size: 3.5rem;
+    color: #262223;
+    line-height: 1;
+}
+
+.popup-contenido p {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.1rem;
+    color: #262223;
+    line-height: 1.5;
+}
+
 /*---ANIMACION---*/
 
 @keyframes scroll {
