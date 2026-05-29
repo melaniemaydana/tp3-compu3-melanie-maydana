@@ -130,43 +130,44 @@
     </script>
 
     <script>
-
         const formulario = document.querySelector('.formulario-contacto');
         const popup = document.getElementById('popup-gracias');
         const btnCerrarPopup = document.getElementById('cerrar-popup');
 
-
         formulario.addEventListener('submit', function (evento) {
+            
+            evento.preventDefault(); 
 
-
-            evento.preventDefault();
-
-
+            
             const formData = new FormData(formulario);
+            
+            
+            const datosAEnviar = Object.fromEntries(formData);
 
-
+            
             fetch(formulario.action, {
                 method: 'POST',
-                body: formData,
                 headers: {
+                    'Content-Type': 'application/json', 
                     'Accept': 'application/json'
+                },
+                body: JSON.stringify(datosAEnviar) 
+            })
+            .then(respuesta => {
+                if (respuesta.ok) {
+                    
+                    popup.classList.replace('popup-oculto', 'popup-activo');
+                    formulario.reset();
+                } else {
+                    alert('Hubo un problema al enviar. Por favor, intentá de nuevo.');
                 }
             })
-                .then(respuesta => {
-                    if (respuesta.ok) {
-
-                        popup.classList.replace('popup-oculto', 'popup-activo');
-                        formulario.reset();
-                    } else {
-                        alert('Hubo un problema al enviar. Por favor, intentá de nuevo.');
-                    }
-                })
-                .catch(error => {
-                    alert('Hubo un problema de conexión. Por favor, intentá de nuevo.');
-                });
+            .catch(error => {
+                alert('Hubo un problema de conexión. Por favor, intentá de nuevo.');
+            });
         });
 
-
+        
         btnCerrarPopup.addEventListener('click', () => {
             popup.classList.replace('popup-activo', 'popup-oculto');
         });
