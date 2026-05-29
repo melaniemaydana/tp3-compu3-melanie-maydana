@@ -1,5 +1,5 @@
 # TP3 - PROYECTO INDIVIDUAL
-## LINK A FIGMA##
+## LINK A FIGMA
 https://www.figma.com/design/kK5ewoPt0iq9XglkjR5j7K/CV-Portfolio?node-id=20-579&t=CYuw6NFhyiqdR2pV-1
 
 ## SOBRE EL PROYECTO
