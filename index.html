@@ -81,7 +81,7 @@
                 </div>
             </div>
             <!--CONTENIDO-->
-            <div class="contenido-presentacion">
+            <div class="contenido-presentacion"> <!-- esto puede ser una etiqueta con más semántica -->
 
                 <div class="info">
                     <h2>/Hola!</h2>
@@ -119,8 +119,8 @@
         </section>
 
         <!--PROYECTOS DESTACADOS-->
-        <section class="proyectos-destacados">
-            <div class="titular">
+        <section class="proyectos-destacados"> <!-- en realidad esta section y la siguiente deberían ser una sola por el contenido que tienen, por qué está separado? -->
+            <div class="titular"> <!-- una evidencia de que hay errores en el trabajo es hacer una seguidilla de elementos internos para tener un solo objeto interno, acá hay una section que tiene un div (titula) que tiene un div (izq) que tiene un div (mi-trabajo) y si quitás todas esas propiedades casi que no estás generando cambios, y además tiene position aplicado que queda rarísimo porque no se justifica en el comportamiento de esta caja -->
                 <div class="izquierda">
                     <div class="mi-trabajo">
                         <div class="mini-line-2"></div>
@@ -139,7 +139,7 @@
 
             <div class="cards">
                 <!-- TARJETA 1 -->
-                <div class="card-1">
+                <div class="card-1"> <!-- mm si tan solo tuviesemos una etiqueta para nombrar elementos que tienen imágenes y descripciones... -->
                     <div class="card-1-contenido">
                         <img src="img/index-img/card-1.svg" alt="proyecto 1 card" height="467">
                     </div>

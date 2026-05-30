@@ -327,7 +327,7 @@ nav a:hover {
 }
 
 /*PROYECTOS DESTACADOS*/
-.proyectos-destacados {
+.proyectos-destacados { /* salvo el padding, ninguna porpiedad está generando cambios porque hay un solo hijo dentro de esta etiqueta */
     padding: 100px 80px 50px 80px;
     display: flex;
     flex-direction: column;
@@ -340,7 +340,7 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    position: relative;
+    position: relative; /* por qué tiene position?*/
 }
 
 .titular img {
@@ -423,7 +423,7 @@ nav a:hover {
 
 .card-1:hover {
     background-image: url("img/index-img/card-1-foto.png");
-    transform: scale(1.05);
+    transform: scale(1.05); /* re mil guarda en las cards porque cuando se hace hover el bg aparece repetido y más pequeño */
 }
 
 .card-1-contenido {
